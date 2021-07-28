@@ -1,0 +1,58 @@
+{
+  "jogadores": [
+    {
+      "id": 0,
+      "name": "Cristiano Ronaldo  dos Santos Aveiro",
+      "region": "Portugual",
+      "clubeAtual": "Juventus FC"
+    },
+    {
+      "id": 1,
+      "name": "Lionel Andrés Messi Cuccittini",
+      "region": "Argentina",
+      "clubeAtual": "Barcelona FC"
+    },
+    {
+      "id": 2,
+      "name": "Neymar da Silva Santos Júnior",
+      "region": "Brasil",
+      "clubeAtual": "Paris Saint-Germain Football Club "
+    },
+    {
+      "id": 3,
+      "name": "Zlatan Ibrahimović",
+      "region": "Suécia",
+      "clubeAtual": "Associazione Calcio Milan"
+    },
+    {
+      "id": 4,
+      "name": "ola",
+      "region": "",
+      "clubeAtual": ""
+    },
+    {
+      "id": 5,
+      "name": "lucas",
+      "region": "ola",
+      "clubeAtual": "ola"
+    },
+    {
+      "id": 6,
+      "name": "lucas",
+      "region": "ola",
+      "clubeAtual": "ola"
+    },
+    {
+      "id": 7,
+      "name": "lucas",
+      "region": "brasil",
+      "clubeAtual": "vasco"
+    },
+    {
+      "id": 8,
+      "name": "ss",
+      "region": "ss",
+      "clubeAtual": "ss"
+    }
+  ]
+}
