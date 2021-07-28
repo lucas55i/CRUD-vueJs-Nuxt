@@ -10,7 +10,7 @@ export default {
         return httpClient.post('/jogadores', jogador)
     },
 
-    updateJogador(){
+    updateJogador(jogador){
         return httpClient.put(`/jogadores/${jogador.id}`, jogador)
     },
 

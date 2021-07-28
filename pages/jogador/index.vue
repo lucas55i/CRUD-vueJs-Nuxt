@@ -31,25 +31,32 @@
     </v-row>
     <addJogador @jogadorAdicionado="buscarJogadores" />
     <br />
-    <v-row>
-      <v-col sm="12" md="12">
-        <v-data-table :headers="headers" :items="jogadores">
-          <template v-slot:[`item.actions`]="{ item }">
-            <removeJogador @jogadorRemovido="buscarJogadores" :id="item.id"/>
-          </template>
-        </v-data-table>
-      </v-col>
-    </v-row>
+    <v-data-table :headers="headers" :items="jogadores">
+      <template v-slot:[`item.delete`]="{ item }">
+        <updateJogador
+          @jogadorEditado="buscarJogadores"
+          :id="item.id"
+          :jogador="item"
+        />
+      </template>
+
+      <template v-slot:[`item.update`]="{ item }">
+        <removeJogador @jogadorRemovido="buscarJogadores" :id="item.id" />
+      </template>
+    </v-data-table>
   </v-container>
 </template>
 
 <script>
 import AddJogador from "../../components/jogador/addJogador.vue";
 import Remove from "../../components/jogador/remove.vue";
+import updateJogador from "../../components/jogador/updateJogador.vue";
+
 export default {
   components: {
     addJogador: AddJogador,
-    removeJogador: Remove
+    removeJogador: Remove,
+    updateJogador: updateJogador
   },
 
   data() {
@@ -68,8 +75,13 @@ export default {
           value: "clubeAtual"
         },
         {
-          text: "Ações",
-          value: "actions"
+          text: "Delete",
+          value: "delete"
+        },
+        {
+          text: "Editar",
+          value: "update",
+          
         }
       ],
 

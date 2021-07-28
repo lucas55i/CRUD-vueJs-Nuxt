@@ -1,6 +1,6 @@
 <template>
   <v-btn icon>
-    <v-icon color="error" @click="remove()"> mdi-delete </v-icon>
+    <v-icon color="error" @click="remove()" > mdi-delete </v-icon>
   </v-btn>
 </template>
 
