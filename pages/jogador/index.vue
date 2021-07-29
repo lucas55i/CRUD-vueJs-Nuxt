@@ -32,16 +32,15 @@
     <addJogador @jogadorAdicionado="buscarJogadores" />
     <br />
     <v-data-table :headers="headers" :items="jogadores">
-      <template v-slot:[`item.delete`]="{ item }">
+      <template v-slot:[`item.update`]="{ item }">
         <updateJogador
           @jogadorEditado="buscarJogadores"
-          :id="item.id"
+          :id="item._id"
           :jogador="item"
         />
       </template>
-
-      <template v-slot:[`item.update`]="{ item }">
-        <removeJogador @jogadorRemovido="buscarJogadores" :id="item.id" />
+      <template v-slot:[`item.delete`]="{ item }">
+        <removeJogador @jogadorRemovido="buscarJogadores" :id="item._id" />
       </template>
     </v-data-table>
   </v-container>
@@ -75,13 +74,12 @@ export default {
           value: "clubeAtual"
         },
         {
-          text: "Delete",
-          value: "delete"
+          text: "Editar",
+          value: "update"
         },
         {
           text: "Editar",
-          value: "update",
-          
+          value: "delete"
         }
       ],
 

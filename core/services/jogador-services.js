@@ -11,10 +11,10 @@ export default {
     },
 
     updateJogador(jogador){
-        return httpClient.put(`/jogadores/${jogador.id}`, jogador)
+        return httpClient.put(`/jogadores/${jogador._id}`, jogador)
     },
 
-    deleteJogador(id){
-        return httpClient.delete(`/jogadores/${id}`)
+    deleteJogador(_id){
+        return httpClient.delete(`/jogadores/${_id}`)
     }
 }
